@@ -74,8 +74,30 @@ public class Main {
     }
 
     public static void task_3(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+
+        if (PrimeOrNComposite(n, 2)){
+            System.out.println("Prime");
+        }else{
+            System.out.println("Composite");
+        }
 
     }
-}
 
+    public static boolean PrimeOrNComposite(int n, int i){
+        if (n == i){
+            return true;
+        }
+        if (n % i == 0){
+            return false;
+        }
+        if (n <= 2){
+            return false;
+        }
+        return PrimeOrNComposite(n, i + 1);
+    }
+}
 
