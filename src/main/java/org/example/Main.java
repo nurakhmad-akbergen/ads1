@@ -14,6 +14,8 @@ public class Main {
                 task_2();
             case 3:
                 task_3();
+            case 4:
+                task4();
 
         }
     }
@@ -99,5 +101,24 @@ public class Main {
         }
         return PrimeOrNComposite(n, i + 1);
     }
+
+    public static void task4(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+
+        System.out.println(factorial(n));
+    }
+
+    public static int factorial(int n){
+        if (n == 0){
+            return 1;
+        }
+
+
+        return n * factorial(n - 1);
+    }
+
 }
 
