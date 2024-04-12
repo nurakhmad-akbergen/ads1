@@ -26,6 +26,8 @@ public class Main {
                 task_8();
             case 9:
                 task_9();
+            case 10:
+                task_10();
         }
     }
 
@@ -223,6 +225,25 @@ public class Main {
             return 1;
         } else {
             return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
+        }
+    }
+    public static void task_10(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a first number:");
+        int a = sc.nextInt();
+
+        System.out.print("Enter a second number:");
+        int b = sc.nextInt();
+
+        System.out.println(gcd(a, b));
+    }
+
+    public static int gcd(int a, int b){
+        if (b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b);
         }
     }
 }
