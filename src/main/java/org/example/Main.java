@@ -22,7 +22,8 @@ public class Main {
                 task_6();
             case 7:
                 task_7();
-
+            case 8:
+                task_8();
         }
     }
 
@@ -181,6 +182,26 @@ public class Main {
             System.out.print(arr[i] + " ");
             reverseArr(arr, i - 1);
         }
+    }
+
+    public static void task_8(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String input = sc.nextLine();
+        if (isNumeric(input)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+    public static boolean isNumeric(String str) {
+        if (str == null) {
+            return false;
+        }
+        if (str.length() == 1) {
+            return Character.isDigit(str.charAt(0));
+        }
+        return Character.isDigit(str.charAt(0)) && isNumeric(str.substring(1));
     }
 
 
