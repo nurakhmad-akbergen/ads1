@@ -12,24 +12,34 @@ public class Main {
         switch (num_of_task) {
             case 1:
                 task_1();
+                break;
             case 2:
                 task_2();
+                break;
             case 3:
                 task_3();
+                break;
             case 4:
                 task_4();
+                break;
             case 5:
                 task_5();
+                break;
             case 6:
                 task_6();
+                break;
             case 7:
                 task_7();
+                break;
             case 8:
                 task_8();
+                break;
             case 9:
                 task_9();
+                break;
             case 10:
                 task_10();
+                break;
         }
     }
     /**
@@ -37,6 +47,7 @@ public class Main {
      * Next with a loop we fill our array and path them on findMin function.
      */
     public static void task_1() {
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a size of array:");
@@ -57,6 +68,9 @@ public class Main {
             }
 
         }
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * This function find minimum value.
@@ -76,6 +90,7 @@ public class Main {
      * Then just deviating it by size and it is important hold it in double type for accuracy.
      */
     public static void task_2(){
+        long startTime = System.nanoTime();
         double total = 0;
         Scanner sc = new Scanner(System.in);
 
@@ -95,11 +110,16 @@ public class Main {
         double result = total / size;
 
         System.out.println("Average: " + result);
+
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * All logic of this task in PrimeOrNComposite() here we just accept values and call it.
      */
     public static void task_3(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
@@ -110,7 +130,9 @@ public class Main {
         }else{
             System.out.println("Composite");
         }
-
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * Here we with if statement check if our number deviating by other number except 1 and itself.
@@ -132,12 +154,17 @@ public class Main {
      * Here we also just accept values and calling recursion function.
      */
     public static void task_4(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
         int n = sc.nextInt();
 
         System.out.println(factorial(n));
+
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * In this function we use recursion.
@@ -154,12 +181,17 @@ public class Main {
      * Just accept and calling recursion function.
      */
     public static void task_5(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
         int n = sc.nextInt();
 
         System.out.println(fib(n));
+
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * In task, we already know a formula to define a last number of fibonachi.
@@ -175,6 +207,7 @@ public class Main {
      * Just accept and calling recursion function.
      */
     public static void task_6(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
@@ -183,6 +216,9 @@ public class Main {
         int d = sc.nextInt();
 
         System.out.println(findDegree(n, d));
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * If degree number became equal to 0 we return 1 and stop recursion.
@@ -198,6 +234,7 @@ public class Main {
      * Just accept and calling recursion function.
      */
     public static void task_7(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a size of array:");
@@ -210,6 +247,9 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         reverseArr(arr, size - 1);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * Recall function with -1 parameter and if i >= 0 we're outputting a value in reverse order.
@@ -224,6 +264,7 @@ public class Main {
      * Just accept and calling recursion function.If return True we output "Yes" else "No".
      */
     public static void task_8(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string:");
         String input = sc.nextLine();
@@ -231,7 +272,11 @@ public class Main {
             System.out.println("Yes");
         } else {
             System.out.println("No");
+
         }
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * Here we use isDigit for define digits.
@@ -251,6 +296,7 @@ public class Main {
      * Just accept and calling recursion function.
      */
     public static void task_9(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a first number:");
@@ -260,7 +306,9 @@ public class Main {
         int k = sc.nextInt();
 
         System.out.println(binomialCoefficient(n, k));
-
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * By given formula and recursion we define binomial coefficient.
@@ -276,6 +324,7 @@ public class Main {
      * Just accept and calling recursion function.
      */
     public static void task_10(){
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a first number:");
@@ -285,6 +334,9 @@ public class Main {
         int b = sc.nextInt();
 
         System.out.println(gcd(a, b));
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("Time: " + duration + " ms");
     }
     /**
      * By given formula and recursion we define binomial coefficient.
