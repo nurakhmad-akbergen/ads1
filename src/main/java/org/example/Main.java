@@ -15,7 +15,13 @@ public class Main {
             case 3:
                 task_3();
             case 4:
-                task4();
+                task_4();
+            case 5:
+                task_5();
+            case 6:
+                task_6();
+            case 7:
+                task_7();
 
         }
     }
@@ -102,7 +108,7 @@ public class Main {
         return PrimeOrNComposite(n, i + 1);
     }
 
-    public static void task4(){
+    public static void task_4(){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
@@ -119,6 +125,64 @@ public class Main {
 
         return n * factorial(n - 1);
     }
+
+    public static void task_5(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+
+        System.out.println(fib(n));
+    }
+
+    public static int fib(int n){
+        if (n <= 1){
+            return n;
+        }else{
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
+
+    public static void task_6(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+        System.out.println("Enter degree of number");
+        int d = sc.nextInt();
+
+        System.out.println(findDegree(n, d));
+    }
+
+    public static int findDegree(int n, int d){
+        if (d == 0){
+            return 1;
+        }
+        return n * findDegree(n, d - 1);
+    }
+
+    public static void task_7(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a size of array:");
+        int size = sc.nextInt();
+
+        System.out.println("Enter elements of array:");
+        int[] arr = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        reverseArr(arr, size - 1);
+    }
+
+    public static void reverseArr(int[] arr, int i){
+        if (i >= 0){
+            System.out.print(arr[i] + " ");
+            reverseArr(arr, i - 1);
+        }
+    }
+
 
 }
 
