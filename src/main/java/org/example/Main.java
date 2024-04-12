@@ -24,6 +24,8 @@ public class Main {
                 task_7();
             case 8:
                 task_8();
+            case 9:
+                task_9();
         }
     }
 
@@ -204,6 +206,24 @@ public class Main {
         return Character.isDigit(str.charAt(0)) && isNumeric(str.substring(1));
     }
 
+    public static void task_9(){
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter a first number:");
+        int n = sc.nextInt();
+
+        System.out.print("Enter a second number:");
+        int k = sc.nextInt();
+
+        System.out.println(binomialCoefficient(n, k));
+
+    }
+    public static int binomialCoefficient(int n, int k){
+        if (k == 0 || k == n) {
+            return 1;
+        } else {
+            return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
+        }
+    }
 }
 
