@@ -47,6 +47,7 @@ public class Main {
      * Next with a loop we fill our array and path them on findMin function.
      */
     public static void task_1() {
+
         long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
 
